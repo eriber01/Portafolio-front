@@ -1,0 +1,32 @@
+.page-404 {
+  height: 100vh;
+  background: url('/public/img/404-2.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.home-404-buttons {
+  height: 70%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.home-404-buttons button{
+  background: tomato;
+}
+
+@media screen and (max-width: 880px) {
+  .page-404 {
+    background: url('/public/img/404-2.jpg');
+    background-size: cover;
+  }
+
+  .home-404-buttons {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}

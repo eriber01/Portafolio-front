@@ -1,0 +1,163 @@
+.menus {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  /* right: 0; */
+  width: 100%;
+  margin-top: 1rem;
+  z-index: 100;
+}
+
+.menus ul {
+  padding: 0;
+}
+
+.navigations {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #ffff;
+  border-radius: 50%;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.actives {
+  width: 700px;
+  /* width: 100%; */
+  /* background-color: #ffff; */
+}
+
+.navigations .toggleMenu {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigations.actives .toggleMenu {
+  background: #ff4181;
+  transition: 0.5s;
+  transition-delay: 0s;
+  transform: translateY(60px);
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.navigations .toggleMenu::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(-5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.navigations .toggleMenu::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.navigations.actives .toggleMenu::before {
+  background: #fff;
+  transition-delay: 0s;
+  transform: translateY(0px) rotate(45deg) scale(0.6);
+}
+
+.navigations.actives .toggleMenu::after {
+  background: #fff;
+  transition-delay: 0s;
+  transform: translateY(0px) rotate(315deg) scale(0.6);
+}
+
+.navigations li {
+  list-style: none;
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+.navigations.actives li {
+  transition-delay: 0.75s;
+  display: flex;
+  transform: scale(1);
+}
+
+.navigations li a {
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.10rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.navigations li a:hover {
+  background: #ff4181;
+  color: #fff;
+}
+
+@media screen and (max-width: 640px) {
+
+  .menus {
+    justify-content: end;
+    padding-right: 0.5rem;
+  }
+
+  .navigations {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: space-evenly;
+  }
+
+  .actives {
+    width: 40%;
+    height: 50vh;
+    border-radius: 10px;
+  }
+
+  .navigations li a {
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.10rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+
+  .navigations.actives .toggleMenu {
+    background: #ff4181;
+    transition: 0.5s;
+    transition-delay: 0s;
+    transform: translateY(200px);
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  }
+}

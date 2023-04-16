@@ -1,0 +1,166 @@
+.card-project-container {
+  /* background-color: #635985; */
+  background: rgb(3, 0, 62);
+  background: linear-gradient(90deg, rgba(3, 0, 62, 1) 30%, rgba(132, 38, 136, 1) 100%);
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.alice-carousel {
+  /* display: none; */
+  z-index: 9;
+  text-align: center;
+}
+
+.card-project {
+  color: black;
+  /* width: 25%; */
+  height: auto !important;
+  width: 350px !important;
+  min-width: 350px !important;
+  background-color: white;
+  /* margin: 3rem; */
+  margin: 1rem;
+  border-radius: 5px;
+  /* margin: 2rem; */
+}
+
+.card-project .project-name span {
+  /* background-color: tomato; */
+  font-size: 1.5rem;
+}
+
+.img-container img {
+  border-radius: 10px;
+}
+
+.tech-container {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  width: 100%;
+  background-color: rgba(106, 57, 255, 0.219);
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech img {
+  width: 8% !important;
+}
+
+.tech img:nth-child(even) {
+  animation: techAnimateOne 3s infinite ease-in-out;
+}
+
+.tech img:nth-child(odd) {
+  animation: techAnimateTwo 3s infinite ease-in-out;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  min-height: 250px;
+  max-height: 400px;
+}
+
+
+.btn-code {
+  --color: #00A97F;
+  --color2: rgb(10, 25, 30);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: .3px solid var(--color);
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.btn-code::after,
+.btn-code::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+  background-color: var(--color);
+}
+
+.btn-code::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn-code:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn-code:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn-code:hover {
+  color: var(--color2);
+}
+
+.btn-code:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+}
+
+/* key frame area */
+
+@keyframes techAnimateOne {
+  0% {
+    transform: translateY(2px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes techAnimateTwo {
+  0% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(-2px);
+  }
+}
