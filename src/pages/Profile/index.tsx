@@ -2,7 +2,6 @@ import React from 'react'
 import { Button, Col, FormGroup, Input, Label, Row } from 'reactstrap'
 import { onChange, Profile } from '../../store/slice/Profile/profileSlice'
 import { useAppDispatch, useAppSelector } from '../../store/store'
-import { validateForm } from '../../utils/validateForm'
 import { useActions } from './useActions'
 
 const Profiles = () => {
