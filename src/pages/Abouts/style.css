@@ -48,7 +48,7 @@
 
 .cards-about {
   width: 500px;
-  height: 150px;
+  height: auto;
   margin: 1rem;
   background: whitesmoke;
   transition: .2s linear;
