@@ -25,6 +25,11 @@ export const useInitialActions = () => {
 
   const { data: Project, loading: loadingProject } = useQuery(GET_PROJECTS, {
     fetchPolicy: "network-only",
+    variables: {
+      where: {
+        enabled: true
+      }
+    }
   });
 
   console.log("data", Project);
